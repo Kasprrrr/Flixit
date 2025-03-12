@@ -1,0 +1,101 @@
+.accountTemplate {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 75px;
+    background: radial-gradient(
+            circle at 95% 15%,
+            rgba(39, 42, 55, 0) 20%,
+            rgba(39, 42, 55, 0.8) 40%,
+            rgba(0, 0, 0, 1) 95%
+        ),
+        linear-gradient(to bottom, rgba(39, 42, 55, 0), rgba(39, 42, 55, 0.8));
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.image {
+    top: 0;
+    //left: 400px;
+    width: 100%;
+    position: absolute;
+    animation: fadeIn 1s forwards;
+}
+
+.text {
+    animation: fadeIn 2s forwards;
+    .title {
+        font-size: 3.5em;
+        font-weight: 900;
+        color: white;
+    }
+
+    .title-dot {
+        font-size: 1.5em;
+        color: #e1466d;
+    }
+
+    .subTitle {
+        font-size: 0.9em;
+        color: #96a0b0;
+    }
+
+    .subTitle-link {
+        color: #e1466d;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .subTitle-link:hover {
+        text-decoration: underline;
+    }
+}
+
+.accountForm {
+    margin-top: 5vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 2s forwards;
+
+    .name-surname-container {
+        display: flex;
+        gap: 25px;
+    }
+
+    .buttonForm {
+        margin-top: 30px;
+        display: flex;
+        gap: 25px;
+
+        Button {
+            padding: 15px;
+            font-size: 1em;
+            font-weight: bold;
+            text-transform: none;
+            border-radius: 40px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        Button:hover {
+            background-color: #eb315f;
+            box-shadow: 0 0 1px #e1466d, 0 0 10px #e1466d, 0 0 1px #e1466d;
+        }
+
+        .buttonFirst {
+            background-color: #555b69;
+        }
+
+        .buttonSecond {
+            background-color: #e1466d;
+        }
+    }
+
+    .errorMessage {
+        color: red;
+        font-size: 14px;
+    }
+}

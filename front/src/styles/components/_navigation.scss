@@ -1,0 +1,125 @@
+.navActive {
+    color: #e1466d;
+}
+
+.navDisabled {
+    color: #ffffff;
+}
+
+.disabled {
+    display: none;
+}
+
+.TopMenu {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 40;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1%;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.TopMenu .logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.TopMenu .logo {
+    width: auto;
+    height: 8vh;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 1));
+}
+
+.TopMenu .flixit {
+    width: auto;
+    height: 7vh;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 1));
+}
+
+.TopMenu .navLinks {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 1));
+}
+
+.TopMenu .navLinks a {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-right: 25%;
+    position: relative;
+}
+
+.TopMenu .navLinks a:not(:last-child)::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -5px;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    transform-origin: center;
+    background: #e1466d;
+}
+
+.TopMenu .navLinks a:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+    transition-duration: 1s;
+}
+
+/* AccountMenu.css */
+
+.drawerContent {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.errorMessage {
+    font-size: 1.3em;
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+
+.drawerName {
+    font-size: 1.3em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+
+.drawerEmail {
+    font-size: 0.9em;
+    color: #8b8ba7;
+    margin-top: 0%;
+    margin-bottom: 15%;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}
+
+.drawerEmail:hover {
+    border-bottom: 1px solid #e1466d;
+    color: #e1466d;
+}
+
+.buttonsContainer {
+    width: 80%;
+    height: 15%;
+    display: grid;
+    gap: 20px;
+}

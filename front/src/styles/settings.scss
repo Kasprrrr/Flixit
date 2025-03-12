@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "font-1";
+    src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "font-1";
+    letter-spacing: 1px;
+}
+
+html, body {
+    background-color: black;
+}
+
+.Button {
+    font-family: "font-1" !important;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #868686;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #323232;
+}

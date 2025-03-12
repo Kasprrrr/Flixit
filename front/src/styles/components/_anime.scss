@@ -1,0 +1,79 @@
+
+
+.createModal {
+    width: 90vw;
+    height: 70vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.9);
+    padding: 3%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nameModal {
+    width: 75vw;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.9);
+    padding: 16px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+
+    h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+    }
+
+    Button {
+        width: 20vw;
+        padding: 20px;
+        font-size: 1em;
+        font-weight: bold;
+        text-transform: none;
+        border-radius: 25px;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9);
+    }
+
+    Button:hover {
+        box-shadow: 0 0 1px #1d90f5, 0 0 10px #1d90f5, 0 0 1px #1d90f5;
+    }
+
+    .buttonFirst {
+        background: radial-gradient(circle, #272a37 25%, rgba(0, 0, 0, 1) 100%);
+    }
+
+    .buttonEnabled {
+        background: radial-gradient(circle, #1d90f5 10%, #0e5899 100%);
+    }
+
+    .buttonEnabled:hover {
+        background-color: #329af5;
+        box-shadow: 0 0 1px #1d90f5, 0 0 12px #1d90f5, 0 0 1px #1d90f5;
+    }
+
+    .buttonDisabled {
+        background: radial-gradient(circle, #4c4e4e 25%, rgb(41, 41, 41) 100%);
+    }
+
+    .buttonDisabled:hover {
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.9);
+    }
+}

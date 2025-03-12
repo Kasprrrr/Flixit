@@ -1,0 +1,58 @@
+/* inputs component from text fields */
+
+.inputForm .MuiInputAdornment-root {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8b8ba7;
+}
+
+.inputForm .MuiInputLabel-root {
+    top: 25px;
+    color: #8b8ba7;
+    font-size: 1.5em;
+    transition: all 0.3s ease;
+}
+
+.inputForm .MuiInputLabel-root.Mui-focused,
+.inputForm .MuiInputLabel-root.MuiFormLabel-filled {
+    transform: translate(15px, -25px) scale(0.5);
+    color: #e1466d;
+}
+
+.inputForm .MuiOutlinedInput-root {
+    background-color: #323644;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    color: white;
+    transition: background-color 0.3s ease;
+    box-shadow: 1px 1px 3px rgba(10, 10, 10, 0.5);
+}
+
+.inputForm .MuiOutlinedInput-root.Mui-focused {
+    background-color: #3c3f49;
+}
+
+.inputForm .MuiOutlinedInput-notchedOutline {
+    border: 0px transparent;
+}
+
+.inputForm .MuiOutlinedInput-root:hover {
+    border: 1px solid #ee3765;
+}
+
+.inputForm .MuiOutlinedInput-root.Mui-focused {
+    border-color: #ee3765;
+    box-shadow: 0 0 10px rgba(0, 102, 255, 0.5);
+}
+
+/* AutoComplete component from search bars */
+
+.MuiAutocomplete-paper {
+    background-color: #323644 !important;
+}
+
+.MuiAutocomplete-option:hover {
+    background-color: #505364 !important;
+}
