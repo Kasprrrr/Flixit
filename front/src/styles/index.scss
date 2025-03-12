@@ -1,10 +1,13 @@
 @import "./settings";
 
 @import "./components/mui";
-
+@import "./components/image";
 @import "./components/card";
 
-@import "./components/navigation";
-@import "./components/account";
-@import "./components/home";
-@import "./components/anime";
+@import "./layouts/navigation";
+@import "./layouts/overlay";
+
+@import "./pages/account";
+@import "./pages/home";
+@import "./pages/catalog";
+@import "./pages/anime";

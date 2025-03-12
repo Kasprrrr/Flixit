@@ -53,8 +53,8 @@ function AnimeSearch() {
                 try {
                     const response = await axios.get(
                         `https://api.jikan.moe/v4/anime?q=${encodeURIComponent(
-                            debouncedQuery
-                        )}&limit=5`
+                            debouncedQuery,
+                        )}&limit=5`,
                     );
                     setSuggestions(response.data.data);
                 } catch (error) {
@@ -72,13 +72,13 @@ function AnimeSearch() {
     const fetchAnimeList = async () => {
         try {
             const response = await axios.get(
-                `https://api.jikan.moe/v4/anime?page=${page}&limit=25`
+                `https://api.jikan.moe/v4/anime?page=${page}&limit=25`,
             );
             setAnimeList((prevAnimeList) => {
                 const newAnimeList = response.data.data;
                 const combinedList = [...prevAnimeList, ...newAnimeList];
                 const uniqueAnime = Array.from(
-                    new Map(combinedList.map((anime) => [anime.mal_id, anime])).values()
+                    new Map(combinedList.map((anime) => [anime.mal_id, anime])).values(),
                 );
 
                 return uniqueAnime;
@@ -116,53 +116,29 @@ function AnimeSearch() {
     };
 
     return (
-        <div className="homeTemplate">
+        <div className="catalogTemplate">
             <SearchBar
                 services={suggestions.map((anime) => anime.title)}
                 onSearch={handleSearch}
                 onSelect={handleSelect}
             />
 
-            <div
-                style={{
-                    //marginTop: "20px",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                }}
-            >
-
-                <div className="cardContainer">
-                    {animeList.map((anime, index: number) => (
-                        <Card
-                            key={index}
-                            imageUrl={anime.images.jpg.image_url}
-                            name={anime.title}
-                            onClick={() => handleAnimeClick(anime.title)}
-                        />
-                    ))}
-                </div>
-                <Button
-                    variant="contained"
-                    onClick={handleAnimeLoad}
-                    sx={{
-                        minWidth: "10vw",
-                        fontWeight: "bold",
-                        backgroundColor: "#ef537b",
-                        color: "white",
-                        borderRadius: "50px",
-                        padding: "10px 20px",
-                        marginBottom: "5vh",
-                        lineHeight: 2.5,
-                        "&:hover": {
-                            backgroundColor: "#e1466d",
-                        },
-                    }}
-                >
-                    Load More
-                </Button>
+            <div className="cardContainer">
+                {animeList.map((anime, index: number) => (
+                    <Card
+                        key={index}
+                        imageUrl={anime.images.jpg.image_url}
+                        name={anime.title}
+                        onClick={() => handleAnimeClick(anime.title)}
+                    />
+                ))}
             </div>
+            <Button
+                variant="contained"
+                onClick={handleAnimeLoad}
+            >
+                Load More
+            </Button>
         </div>
     );
 }

@@ -1,0 +1,40 @@
+.catalogTemplate {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #000000, #1c1c1d, #191a1b, #1c1c1d, #000000);
+
+    Button {
+        margin-bottom: 3%;
+        padding: 15px;
+        width: 25%;
+        font-size: 1em;
+        font-weight: bold;
+        text-transform: none;
+        border-radius: 40px;
+        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+        background-color: var(--primary-color);
+
+        &:hover {
+            background-color: #eb315f;
+            box-shadow: 0 0 1px var(--button-dark), 0 0 10px var(--button-dark),
+                0 0 1px var(--button-dark);
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .catalogTemplate Button {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .catalogTemplate Button {
+        width: 80%;
+    }
+}

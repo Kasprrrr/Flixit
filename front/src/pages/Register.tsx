@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import { TextField, Button, InputAdornment, CircularProgress } from "@mui/material";
 import { AccountCircle, AlternateEmail, Visibility, VisibilityOff } from "@mui/icons-material";
 import { useRegister } from "../hooks/registerRequest";
-
-import landscapeImage from "../assets/images/register.jpeg";
 
 const CreateAccount: React.FC = () => {
     const navigate = useNavigate();
@@ -38,11 +37,18 @@ const CreateAccount: React.FC = () => {
     return (
         <>
             <img
-                src="https://images.alphacoders.com/741/thumb-1920-741383.png"
+                src="https://images6.alphacoders.com/133/thumb-1920-1330710.png"
                 alt="Description"
-                className="image"
+                className="imageLarge"
             />
-            <div className="accountTemplate">
+            <div className="circleOverlay" />
+            <motion.div
+                initial={{ opacity: 0, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 50 }}
+                transition={{ duration: 0.5 }}
+                className="accountTemplate"
+            >
                 <div className="text">
                     <h1 className="title">
                         Create new account<span className="title-dot">.</span>
@@ -153,7 +159,7 @@ const CreateAccount: React.FC = () => {
                         </Button>
                     </div>
                 </form>
-            </div>
+            </motion.div>
         </>
     );
 };

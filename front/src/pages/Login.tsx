@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 import { TextField, Button, InputAdornment, CircularProgress } from "@mui/material";
 import { Visibility, VisibilityOff, AlternateEmail } from "@mui/icons-material";
 import { useLogin } from "../hooks/loginRequest";
-
-//import landscapeImage from "../assets/images/login.jpg";
 
 const Login: React.FC = () => {
     const navigate = useNavigate();
@@ -36,11 +35,18 @@ const Login: React.FC = () => {
     return (
         <>
             <img
-                src="https://images4.alphacoders.com/976/thumb-1920-976013.jpg"
+                src="https://images7.alphacoders.com/138/thumb-1920-1382622.png"
                 alt="Description"
-                className="image"
+                className="imageLarge"
             />
-            <div className="accountTemplate">
+            <div className="circleOverlay" />
+            <motion.div
+                initial={{ opacity: 0, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 50 }}
+                transition={{ duration: 0.5 }}
+                className="accountTemplate"
+            >
                 <div className="text">
                     <h1 className="title">
                         Login<span className="title-dot">.</span>
@@ -112,7 +118,7 @@ const Login: React.FC = () => {
                         </Button>
                     </div>
                 </form>
-            </div>
+            </motion.div>
         </>
     );
 };

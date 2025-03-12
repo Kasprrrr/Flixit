@@ -5,7 +5,6 @@
     gap: 25px;
     width: 100%;
     padding: 5vh;
-    //background-color: black;
 }
 
 .card {
@@ -46,7 +45,6 @@
 .card-content h3 {
     font-size: 1em;
     font-weight: bold;
-    color: white;
     text-align: center;
     word-wrap: break-word;
     white-space: normal;
@@ -54,10 +52,10 @@
     text-overflow: ellipsis;
     max-width: 90%;
     display: -webkit-box;
+    transition: transform 0.2s ease;
     -webkit-line-clamp: 2; /* Limits to 2 lines */
     -webkit-box-orient: vertical;
 }
-
 
 .card:hover img {
     transform: scale(1.1);
@@ -69,4 +67,22 @@
 
 .card:hover {
     box-shadow: 4px 4px 12px #e1466d;
+}
+
+@media (max-width: 1000px) {
+    .card {
+        width: 22%;
+        height: 35vh;
+    }
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 45%;
+        height: 30vh;
+    }
+
+    .card-content h3 {
+        font-size: 0.8em;
+    }
 }

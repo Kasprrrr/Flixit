@@ -3,6 +3,13 @@
     src: url(../assets/fonts/Poppins-Regular.ttf);
 }
 
+:root {
+    --primary-color: #e1466d;
+    --text-gray: #96a0b0;
+    --button-dark: #222;
+    --bg-color: black;
+}
+
 * {
     padding: 0;
     margin: 0;

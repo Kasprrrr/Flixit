@@ -1,0 +1,149 @@
+.accountTemplate {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 5%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text {
+    .title {
+        font-size: 3.5em;
+        font-weight: 900;
+    }
+
+    .title-dot {
+        font-size: 1.5em;
+        color: var(--primary-color);
+    }
+
+    .subTitle {
+        font-size: 0.9em;
+        color: var(--text-gray);
+    }
+
+    .subTitle-link {
+        color: var(--primary-color);
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.accountForm {
+    margin-top: 5vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 2s forwards;
+
+    .name-surname-container {
+        display: flex;
+        gap: 25px;
+    }
+
+    .buttonForm {
+        margin-top: 30px;
+        display: flex;
+        gap: 25px;
+        flex-direction: row;
+
+        Button {
+            padding: 15px;
+            font-size: 1em;
+            font-weight: bold;
+            text-transform: none;
+            border-radius: 40px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+
+            &:hover {
+                box-shadow: 0 0 1px var(--button-dark), 0 0 10px var(--button-dark),
+                    0 0 1px var(--button-dark);
+            }
+        }
+
+        .buttonFirst {
+            background-color: var(--button-dark);
+
+            &:hover {
+                background-color: var(--button-dark);
+            }
+        }
+
+        .buttonSecond {
+            background-color: var(--primary-color);
+
+            &:hover {
+                background-color: #eb315f;
+                box-shadow: 0 0 1px var(--primary-color), 0 0 10px var(--primary-color),
+                    0 0 1px var(--primary-color);
+            }
+        }
+    }
+
+    .errorMessage {
+        color: red;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .accountTemplate {
+        padding-left: 0%;
+        align-items: center;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .text .title {
+        font-size: 2.5em;
+    }
+
+    .text .title-dot {
+        font-size: 2em;
+    }
+
+    .accountForm {
+        width: 75%;
+    }
+
+    .buttonForm Button {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 500px) {
+    .accountTemplate {
+        padding-left: 0%;
+        align-items: center;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    .text .title {
+        font-size: 2em;
+    }
+
+    .text .title-dot {
+        font-size: 2em;
+    }
+
+    .accountForm {
+        width: 90%;
+    }
+
+    .buttonForm Button {
+        font-size: 0.8em;
+    }
+}
